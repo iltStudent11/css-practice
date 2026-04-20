@@ -1,0 +1,57 @@
+/* Element selector: Headings and paragraphs */
+h1 {
+  color: navy;
+  text-transform: uppercase;    /* Will be overridden for #main-title below */
+}
+
+p {
+  color: #333;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Class selector for navigation */
+.navbar {
+  background-color: #efefef;
+  padding: 12px 0;
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ID selector for main heading */
+#main-title {
+  color: crimson;               /* Higher specificity than element selector */
+  text-transform: capitalize;   /* This will override h1’s uppercase due to specificity */
+}
+
+/* Conflicting rule: a class for special headings */
+.special-heading {
+  color: teal;   /* Lower specificity than #main-title */
+  text-transform: lowercase !important; /* !important wins over all except inline style */
+}
+
+/* Demonstrate specificity conflict */
+h1.special-heading {
+  color: orange; /* element+class -> specificity higher than just class */
+}
+
+/* Subtitle using letter-spacing */
+.subtitle {
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Card component using box model */
+.card {
+  width: 320px;
+  padding: 20px;
+  margin: 18px auto;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: #fafafa;
+  text-align: left;
+  font-family: 'Roboto', Arial, sans-serif;
+}
