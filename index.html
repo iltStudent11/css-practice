@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CSS Specificity, Text, and Card Demo</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#">Home</a> |
+    <a href="#">Projects</a> |
+    <a href="#">Contact</a>
+  </nav>
+
+  <h1 id="main-title" class="special-heading">Welcome to My Page</h1>
+  <!-- ID beats both .special-heading and h1, but .special-heading’s !important overrides color if applied there. -->
+
+  <div class="subtitle">A brief subtitle goes here</div>
+
+  <section class="card">
+    <h2 class="special-heading">Card Title</h2>
+    <p>This is a simple card component. It uses padding, margin, borders, and border-radius, and has a box-shadow as well.</p>
+  </section>
+</body>
+</html>
